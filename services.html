@@ -96,7 +96,11 @@
   <div class="wrap" style="max-width:760px">
     <div class="section-label reveal">Contact Dr. P</div>
     <h2 class="reveal">Send Dr. P a message</h2>
-    <form id="contactForm" class="contact-form reveal">
+    <form id="contactForm" class="contact-form reveal" action="https://formsubmit.co/dr.p@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from drpinspires.com"/>
+      <input type="hidden" name="_next" value="https://www.drpinspires.com/services?sent=1"/>
+      <input type="hidden" name="_template" value="table"/>
+      <input type="text" name="_honey" style="display:none"/>
       <div><label>First Name <em>*</em><input type="text" name="first" required/></label></div>
       <div><label>Last Name <em>*</em><input type="text" name="last" required/></label></div>
       <div><label>Email Address <em>*</em><input type="email" name="email" required/></label></div>
@@ -104,7 +108,7 @@
       <div class="full"><label>Message <em>*</em><textarea name="message" required></textarea></label></div>
       <div class="full"><button type="submit" class="btn">Send Message</button></div>
     </form>
-    <div id="formDone" class="form-done">Thank you! Your email app will open with your message ready to send.</div>
+    <div id="formDone" class="form-done">Thank you! Your message has been sent. Dr. P will get back to you soon.</div>
   </div>
 </section>
 

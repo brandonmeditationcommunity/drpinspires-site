@@ -13,17 +13,10 @@ document.querySelectorAll('[data-yt]').forEach(function(el){
   },{once:true});
 });
 
-/* contact form -> mailto compose to drp@drpinspires.com */
-var cf=document.getElementById('contactForm');
-if(cf){
-  cf.addEventListener('submit',function(e){
-    e.preventDefault();
-    function v(n){var el=cf.querySelector('[name="'+n+'"]');return el?el.value:''}
-    var fn=v('first'),ln=v('last'),em=v('email'),ph=v('phone'),msg=v('message');
-    var subj='Website inquiry from '+fn+' '+ln;
-    var body='Name: '+fn+' '+ln+'\nEmail: '+em+'\nPhone: '+ph+'\n\nMessage:\n'+msg;
-    window.location.href='mailto:drp@drpinspires.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
-    var done=document.getElementById('formDone');
-    if(done){done.style.display='block';cf.style.display='none'}
-  });
+/* contact form posts to FormSubmit (delivers to Dr. P's inbox).
+   After redirect back with ?sent=1, show the thank-you message. */
+if(window.location.search.indexOf('sent=1')>-1){
+  var cf=document.getElementById('contactForm'),done=document.getElementById('formDone');
+  if(cf){cf.style.display='none'}
+  if(done){done.style.display='block';done.scrollIntoView({block:'center'})}
 }
