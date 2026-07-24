@@ -20,3 +20,13 @@ if(window.location.search.indexOf('sent=1')>-1){
   if(cf){cf.style.display='none'}
   if(done){done.style.display='block';done.scrollIntoView({block:'center'})}
 }
+
+/* Contact page: the top-right "Contact Dr. P" nav button links to #send.
+   Force the form section visible and smooth-scroll to it (native hash scroll
+   is unreliable alongside the fade-in reveal animation). */
+document.querySelectorAll('a[href="#send"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.getElementById('send');
+    if(t){e.preventDefault();t.classList.add('in');t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
