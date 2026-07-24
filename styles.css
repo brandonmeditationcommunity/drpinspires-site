@@ -18,6 +18,7 @@ a{text-decoration:none;color:inherit}
 
 /* ---------- nav ---------- */
 nav.site-nav{position:sticky;top:0;z-index:50;background:rgba(14,26,43,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+#send{scroll-margin-top:96px}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1200px;margin:0 auto}
 .nav-inner .brand img{width:84px}
 .nav-links{display:flex;align-items:center;gap:32px}
